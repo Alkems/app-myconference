@@ -59,7 +59,15 @@
 
 	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
+	  <PackageReference Include="Jeffsum" Version="0.0.2-beta" />
 	  <PackageReference Include="Microsoft.UI.Xaml" Version="2.8.2" />
+	  <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Pages\AgendaPage.xaml.cs">
+	    <DependentUpon>AgendaPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
