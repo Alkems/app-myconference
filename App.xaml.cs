@@ -8,7 +8,7 @@ namespace app_myconference;
 
 public partial class App : Application
 {
-    const int WindowWidth = 540;
+    const int WindowWidth = 600;
     const int WindowHeight = 1150;
 
     public App()

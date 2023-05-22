@@ -3,36 +3,36 @@
     x:Class="app_myconference.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:app_myconference"
+    xmlns:pages="clr-namespace:app_myconference.Pages"
     Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
-        <Tab Title="Schedule">
+        <Tab Title="Schedule" Icon="tab_schedule.png">
             <ShellContent
                 Title="Day 1"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate pages:SchedulePage}"
                 Route="ScheduleDay1" />
             <ShellContent
                 Title="Day 2"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate pages:SchedulePage}"
                 Route="ScheduleDay2" />
         </Tab>
-        <Tab Title="My Agenda">
+        <Tab Title="My Agenda" Icon="tab_agenda.png">
             
             <ShellContent
                 Title="Day 1"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate pages:AgendaPage}"
                 Route="MyAgendaDay1" />
 
             <ShellContent
                 Title="Day 2"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate pages:AgendaPage}"
                 Route="MyAgendaDay2" />
         </Tab>
-        <Tab Title="Sponsors">
+        <Tab Title="Sponsors" Icon="tab_sponsors.png">
             <ShellContent
                 Title="Sponsors"
-                ContentTemplate="{DataTemplate local:MainPage}"
+                ContentTemplate="{DataTemplate pages:SchedulePage}"
                 Route="Sponsors" />
         </Tab>
     </TabBar>
