@@ -4,3 +4,4 @@ global using Models;
 global using static Jeffsum.Goldblum;
 global using Jeffsum;
 global using ViewModels;
+global using app_myconference.Pages;

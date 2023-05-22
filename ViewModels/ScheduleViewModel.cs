@@ -5,13 +5,13 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace ViewModels;
-public partial class AgendaViewModel : ObservableObject
+public partial class ScheduleViewModel : ObservableObject
 {
     public int Day { get; set; }
-    public ObservableRangeCollection<Grouping<string, Session>> Agenda { get; } = new();
+    public ObservableRangeCollection<Grouping<string, Session>> Schedule { get; } = new();
     Random random = new();
 
-    public AgendaViewModel()
+    public ScheduleViewModel()
     {
 
     }
@@ -30,7 +30,7 @@ public partial class AgendaViewModel : ObservableObject
                      group session by session.StartTimeDisplay into sessiongroup
                      select new Grouping<string, Session>(sessiongroup.Key, sessiongroup);
 
-        Agenda.AddRange(sorted);
+        Schedule.AddRange(sorted);
 
         return Task.CompletedTask;
 
@@ -49,22 +49,5 @@ public partial class AgendaViewModel : ObservableObject
                 });
             }
         }
-    }
-}
-
-
-public class AgendaDay1ViewModel : AgendaViewModel
-{
-    public AgendaDay1ViewModel()
-    {
-        Day = 1;
-    }
-}
-
-public class AgendaDay2ViewModel : AgendaViewModel
-{
-    public AgendaDay2ViewModel()
-    {
-        Day = 2;
     }
 }
